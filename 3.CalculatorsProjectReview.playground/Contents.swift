@@ -1,4 +1,5 @@
 import UIKit
+import Darwin
 
 //MARK: - 프로퍼티 옵저버(willSet, didSet)
 
@@ -36,6 +37,21 @@ myName.nickName = "JeongJae"
 
 //- @IBDesignable
 "스토리보드에서 생성한 객체와 소스코드를 연결하여 해당 객체의 현재 속성을 스토리보드에 실시간으로 반영하여 보여준다."
+
+"예제"
+@IBDesignable
+class PracticeView: UIView {
+    
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+}
 
 
 //MARK: - truncatingRemainder(dividingBy:)
